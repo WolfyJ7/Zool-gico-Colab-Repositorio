@@ -1,11 +1,234 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sitios interes</title>
+    <title>Sitios de Interés - ZooNiverse</title>
 </head>
-<body>
+
+<body style="margin: 0; padding: 0; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background-color: #0b110d; color: #f8fafc; min-height: 100vh; box-sizing: border-box;">
+
+<div style="background-color:#0b110d; min-height:90vh; margin:0; padding:20px; box-sizing:border-box; background-image:linear-gradient(rgba(0,0,0,0.20), rgba(0,0,0,0.40)), url('img/Loro_inicio.jpg'); background-size:cover; background-position:center; display:flex; flex-direction:column; justify-content:space-between;">
+        <nav style="display:flex; justify-content:space-between; align-items:center; padding:10px 40px; text-align:center; flex-wrap:wrap;">
+            <div style="font-size:22px; font-weight:bold; color:#c2c784; letter-spacing:2px;">ZooNiverse</div>
+            <div style="display:flex; gap:25px; font-size:14px; align-items:center; flex-wrap:wrap;">
+                <a href="Inicio.html" style="color:#ffffff; text-decoration:none; font-weight:bold;">Inicio</a>
+                <a href="SobreNosotros.html" style="color:#ffffff; text-decoration:none;"> Sobre Nosotros</a>
+                <a href="Animales.html" style="color:#ffffff; text-decoration:none;">Animales</a>
+                <a href="Contactenos.html" style="color:#ffffff; text-decoration:none;">Contactenos</a>
+                <a href="InicioSesion.html" style="color:#ffffff; text-decoration:none;">Inicio Sesion</a>
+                <a href="SitiosInteres.html" style="color:#ffffff; text-decoration:none;">Sitios de Interes </a>
+            </div>
+        </nav>
+    <!-- ==========================================
+         LÓGICA DE INTERACTIVIDAD CON RADIO BUTTONS
+         ========================================== -->
+    <input type="radio" id="tab1" name="seccion-interes" class="tab-radio" checked>
+    <input type="radio" id="tab2" name="seccion-interes" class="tab-radio">
+    <input type="radio" id="tab3" name="seccion-interes" class="tab-radio">
+    <input type="radio" id="tab4" name="seccion-interes" class="tab-radio">
+    <input type="radio" id="tab5" name="seccion-interes" class="tab-radio">
+
+    <!-- Encabezado de la página -->
+    <header style="max-width: 1200px; margin: 0 auto; padding: 40px 20px 20px 20px; text-align: center;">
+        <h1 style="font-size: 36px; font-weight: 800; color: #c2c784; margin: 0 0 10px 0; letter-spacing: -0.5px;">Sitios de Interés en ZooNiverse</h1>
+        <p style="color: #94a3b8; font-size: 16px; margin: 0 auto; max-width: 600px;">Descubre las experiencias, zonas temáticas y actividades exclusivas preparadas para tu visita.</p>
+    </header>
     
+    <!-- Estructura principal dividida en dos columnas -->
+    <div style="max-width: 1200px; margin: 0 auto; padding: 20px; display: flex; gap: 30px; min-height: 550px; flex-wrap: wrap;">
+        <!-- Menú Lateral (Etiquetas que funcionan como botones interactivos) -->
+        <div style="width: 280px; display: flex; flex-direction: column; gap: 8px; flex-shrink: 0; flex-grow: 1;">
+            
+            <label for="tab1" onmouseover="this.style.color='#c2c784'; this.style.borderColor='#c2c784';" onmouseout="if(!document.getElementById('tab1').checked){this.style.color='#94a3b8'; this.style.borderColor='rgba(255,255,255,0.08)';}" style="padding: 16px 20px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; cursor: pointer; color: #94a3b8; font-weight: 600; font-size: 14px; display: block; transition: all 0.3s ease;">
+                📅 Eventos y Espectáculos
+            </label>
+            <label for="tab2" onmouseover="this.style.color='#c2c784'; this.style.borderColor='#c2c784';" onmouseout="if(!document.getElementById('tab2').checked){this.style.color='#94a3b8'; this.style.borderColor='rgba(255,255,255,0.08)';}" style="padding: 16px 20px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; cursor: pointer; color: #94a3b8; font-weight: 600; font-size: 14px; display: block; transition: all 0.3s ease;">
+                💚 Conservación y Donaciones
+            </label>
+            <label for="tab3" onmouseover="this.style.color='#c2c784'; this.style.borderColor='#c2c784';" onmouseout="if(!document.getElementById('tab3').checked){this.style.color='#94a3b8'; this.style.borderColor='rgba(255,255,255,0.08)';}" style="padding: 16px 20px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; cursor: pointer; color: #94a3b8; font-weight: 600; font-size: 14px; display: block; transition: all 0.3s ease;">
+                🍔 Gastronomía y Descanso
+            </label>
+            <label for="tab4" onmouseover="this.style.color='#c2c784'; this.style.borderColor='#c2c784';" onmouseout="if(!document.getElementById('tab4').checked){this.style.color='#94a3b8'; this.style.borderColor='rgba(255,255,255,0.08)';}" style="padding: 16px 20px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; cursor: pointer; color: #94a3b8; font-weight: 600; font-size: 14px; display: block; transition: all 0.3s ease;">
+                ✨ Experiencias Exclusivas
+            </label>
+            <label for="tab5" onmouseover="this.style.color='#c2c784'; this.style.borderColor='#c2c784';" onmouseout="if(!document.getElementById('tab5').checked){this.style.color='#94a3b8'; this.style.borderColor='rgba(255,255,255,0.08)';}" style="padding: 16px 20px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; cursor: pointer; color: #94a3b8; font-weight: 600; font-size: 14px; display: block; transition: all 0.3s ease;">
+                🛡️ Normas y Bienestar Animal
+            </label>
+        </div>
+
+        <!-- Contenedor de Información (Panel Derecho) -->
+        <div style="flex: 1; min-width: 300px; background: #1e293b; border: 1px solid #334155; border-radius: 20px; padding: 35px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+
+            <!-- Panel 1: Eventos y Espectáculos -->
+            <div id="panel1" style="display: none;">
+                <h2 style="color: #c2c784; font-size: 24px; margin-top: 0; margin-bottom: 8px;">Agenda de Eventos y Espectáculos</h2>
+                <p style="color: #94a3b8; font-size: 14px; margin-bottom: 25px;">Acompaña a nuestros biólogos en las actividades diarias de alimentación y aprendizaje.</p>
+
+                <div style="display: flex; flex-direction: column; gap: 15px;">
+                    <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); padding: 18px; border-radius: 14px; display: flex; align-items: center; justify-content: space-between; gap: 15px; flex-wrap: wrap;">
+                        <div>
+                            <span style="color: #4ade80; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">10:00 AM — Sabana Africana</span>
+                            <h3 style="color: #c2c784; margin: 4px 0; font-size: 16px;">Alimentación de Girafas y Zebras</h3>
+                            <p style="color: #94a3b8; margin: 0; font-size: 13px;">Aprende sobre la dieta y comportamiento en manada con nuestro equipo veterinario.</p>
+                        </div>
+                        <span style="background: rgba(74, 222, 128, 0.1); color: #4ade80; padding: 6px 12px; border-radius: 20px; font-size: 12px; font-weight: 600;">En vivo</span>
+                    </div>
+
+                    <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); padding: 18px; border-radius: 14px; display: flex; align-items: center; justify-content: space-between; gap: 15px; flex-wrap: wrap;">
+                        <div>
+                            <span style="color: #38bdf8; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">02:30 PM — Anfiteatro Principal</span>
+                            <h3 style="color: #c2c784; margin: 4px 0; font-size: 16px;">Vuelo Libre: Aves Rapaces y Exóticas</h3>
+                            <p style="color: #94a3b8; margin: 0; font-size: 13px;">Demostración educativa sobre las habilidades aéreas y conservación del cóndor y las águilas.</p>
+                        </div>
+                        <span style="background: rgba(56, 189, 248, 0.1); color: #38bdf8; padding: 6px 12px; border-radius: 20px; font-size: 12px; font-weight: 600;">Popular</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Panel 2: Conservación y Donaciones -->
+            <div id="panel2" style="display: none;">
+                <h2 style="color: #c2c784; font-size: 24px; margin-top: 0; margin-bottom: 8px;">Programas de Conservación</h2>
+                <p style="color: #94a3b8; font-size: 14px; margin-bottom: 25px;">Apoya nuestras expediciones de rescate, medicina veterinaria e investigación de hábitats naturales.</p>
+
+                <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+                    <div style="flex: 1; min-width: 220px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); padding: 20px; border-radius: 16px;">
+                        <h3 style="color: #c2c784; margin-top: 0; font-size: 18px;">Proyecto Felinos de la Selva</h3>
+                        <p style="color: #94a3b8; font-size: 13px; line-height: 1.5;">Financiación para monitoreo de jaguares y pumas en su estado natural mediante cámaras trampa.</p>
+                        <button onmouseover="this.style.background='#a8ad6e'" onmouseout="this.style.background='#c2c784'" style="width: 100%; margin-top: 10px; padding: 10px; background: #c2c784; color: #0b110d; border: none; border-radius: 10px; font-weight: 700; cursor: pointer; transition: background 0.3s ease;">Donar al Proyecto</button>
+                    </div>
+
+                    <div style="flex: 1; min-width: 220px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); padding: 20px; border-radius: 16px;">
+                        <h3 style="color: #c2c784; margin-top: 0; font-size: 18px;">Hospital de Fauna Silvestre</h3>
+                        <p style="color: #94a3b8; font-size: 13px; line-height: 1.5;">Dotación de equipos médicos avanzados para la rehabilitación de especies rescatadas del tráfico ilegal.</p>
+                        <button onmouseover="this.style.background='#a8ad6e'" onmouseout="this.style.background='#c2c784'" style="width: 100%; margin-top: 10px; padding: 10px; background: #c2c784; color: #0b110d; border: none; border-radius: 10px; font-weight: 700; cursor: pointer; transition: background 0.3s ease;">Donar al Proyecto</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Panel 3: Gastronomía y Descanso -->
+            <div id="panel3" style="display: none;">
+                <h2 style="color: #c2c784; font-size: 24px; margin-top: 0; margin-bottom: 8px;">Gastronomía y Zonas de Descanso</h2>
+                <p style="color: #94a3b8; font-size: 14px; margin-bottom: 25px;">Puntos de recarga, áreas verdes de sombra y restaurantes temáticos para recargar energías.</p>
+
+                <div style="display: flex; flex-direction: column; gap: 15px;">
+                    <div style="display: flex; align-items: center; justify-content: space-between; padding: 15px; background: rgba(255,255,255,0.03); border-radius: 12px; border: 1px solid rgba(255,255,255,0.05); flex-wrap: wrap;">
+                        <div>
+                            <h4 style="color: #c2c784; margin: 0; font-size: 15px;">Restaurante "Mirador de la Sabana"</h4>
+                            <p style="color: #94a3b8; margin: 3px 0 0 0; font-size: 13px;">Comida internacional con vista panorámica a la pradera de herbívoros.</p>
+                        </div>
+                        <span style="color: #fbbf24; font-weight: 600; font-size: 13px;">Sector Norte</span>
+                    </div>
+
+                    <div style="display: flex; align-items: center; justify-content: space-between; padding: 15px; background: rgba(255,255,255,0.03); border-radius: 12px; border: 1px solid rgba(255,255,255,0.05); flex-wrap: wrap;">
+                        <div>
+                            <h4 style="color: #c2c784; margin: 0; font-size: 15px;">Café & Pícnic "El Bosque"</h4>
+                            <p style="color: #94a3b8; margin: 3px 0 0 0; font-size: 13px;">Estación de café orgánico, batidos naturales y zonas de hamacas gratuitas.</p>
+                        </div>
+                        <span style="color: #fbbf24; font-weight: 600; font-size: 13px;">Sector Central</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Panel 4: Experiencias Exclusivas -->
+            <div id="panel4" style="display: none;">
+                <h2 style="color: #c2c784; font-size: 24px; margin-top: 0; margin-bottom: 8px;">Experiencias Exclusivas</h2>
+                <p style="color: #94a3b8; font-size: 14px; margin-bottom: 25px;">Recorridos privados y contacto directo bajo la supervisión de expertos (Cupos limitados).</p>
+
+                <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+                    <div style="flex: 1; min-width: 200px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); padding: 20px; border-radius: 16px;">
+                        <h4 style="color: #c2c784; margin-top: 0; font-size: 16px;">Tour Safari VIP</h4>
+                        <p style="color: #94a3b8; font-size: 13px; line-height: 1.4;">Recorrido guiado en vehículo eléctrico dentro del espacio abierto de mamíferos grandes.</p>
+                        <span style="color: #38bdf8; font-weight: 700; font-size: 13px;">Reserva previa</span>
+                    </div>
+
+                    <div style="flex: 1; min-width: 200px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); padding: 20px; border-radius: 16px;">
+                        <h4 style="color: #c2c784; margin-top: 0; font-size: 16px;">Safari Nocturno</h4>
+                        <p style="color: #94a3b8; font-size: 13px; line-height: 1.4;">Descubre la vida de las especies nocturnas y depredadores cuando cae el sol.</p>
+                        <span style="color: #38bdf8; font-weight: 700; font-size: 13px;">Viernes y Sábados</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Panel 5: Normas del Parque y Bienestar Animal -->
+            <div id="panel5" style="display: none;">
+                <h2 style="color: #c2c784; font-size: 24px; margin-top: 0; margin-bottom: 8px;">Normas del Parque y Bienestar Animal</h2>
+                <p style="color: #94a3b8; font-size: 14px; margin-bottom: 25px;">Instrucciones para garantizar la tranquilidad y seguridad de nuestros ejemplares.</p>
+
+                <ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px;">
+                    <li style="display: flex; align-items: center; gap: 12px; color: #cbd5e1; font-size: 14px; background: rgba(255,255,255,0.02); padding: 12px 16px; border-radius: 10px;">
+                        <span style="color: #ef4444; font-size: 18px;">🚫</span> Prohibido alimentar a los animales con comida ajena a su dieta.
+                    </li>
+                    <li style="display: flex; align-items: center; gap: 12px; color: #cbd5e1; font-size: 14px; background: rgba(255,255,255,0.02); padding: 12px 16px; border-radius: 10px;">
+                        <span style="color: #ef4444; font-size: 18px;">🔇</span> Mantener un tono de voz moderado y evitar ruidos estruendosos en miradores.
+                    </li>
+                    <li style="display: flex; align-items: center; gap: 12px; color: #cbd5e1; font-size: 14px; background: rgba(255,255,255,0.02); padding: 12px 16px; border-radius: 10px;">
+                        <span style="color: #ef4444; font-size: 18px;">📸</span> No utilizar flash de las cámaras en los hábitats oscuros o nocturnos.
+                    </li>
+                    <li style="display: flex; align-items: center; gap: 12px; color: #cbd5e1; font-size: 14px; background: rgba(255,255,255,0.02); padding: 12px 16px; border-radius: 10px;">
+                        <span style="color: #4ade80; font-size: 18px;">♻️</span> Utilizar los puntos ecológicos de separación de residuos en todo el parque.
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+    <style>
+        /* Ocultar los inputs de radio que controlan la lógica */
+        .tab-radio {
+            display: none;
+        }
+
+        /* Lógica para mostrar el panel correspondiente al marcar cada radio */
+        #tab1:checked ~ div div #panel1,
+        #tab2:checked ~ div div #panel2,
+        #tab3:checked ~ div div #panel3,
+        #tab4:checked ~ div div #panel4,
+        #tab5:checked ~ div div #panel5 {
+            display: block !important;
+        }
+
+        /* Estilos visuales dinámicos para los botones/etiquetas según la pestaña activa */
+        #tab1:checked ~ div div label[for="tab1"],
+        #tab2:checked ~ div div label[for="tab2"],
+        #tab3:checked ~ div div label[for="tab3"],
+        #tab4:checked ~ div div label[for="tab4"],
+        #tab5:checked ~ div div label[for="tab5"] {
+            background: rgba(194, 199, 132, 0.15) !important;
+            border-color: #c2c784 !important;
+            color: #c2c784 !important;
+        }
+    </style>
+
+</div>
+<!-- Pie de página centrado -->
+   <footer style="background-color:#0b110d; padding:45px 40px 20px; border-top:1px solid rgba(255,255,255,0.08);">
+        <div style="display:flex; justify-content:space-around; flex-wrap:wrap; gap:35px;">
+            <div style="max-width:260px;">
+                <h2 style="color:#c2c784; font-size:25px; letter-spacing:2px;">ZooNiverse</h2>
+                <p style="color:#aaaaaa; font-size:14px; line-height:1.7;">Un universo lleno de vida, naturaleza y especies extraordinarias. Descubre y aprende con nosotros.</p>
+            </div>
+            <div>
+                <h3 style="color:#c2c784; font-size:17px;">Navegación </h3>
+                <a href="Inicio.html" style="display:block; color:#aaaaaa; text-decoration:none; margin:12px 0; font-size:14px;"> Inicio </a>
+                <a href="SobreNosotros.html" style="display:block; color:#aaaaaa; text-decoration:none; margin:12px 0; font-size:14px;">Sobre nosotros</a>
+                <a href="Animales.html" style="display:block; color:#aaaaaa; text-decoration:none; margin:12px 0; font-size:14px;">Animales</a>
+                <a href="SitiosInteres.html" style="display:block; color:#aaaaaa; text-decoration:none; margin:12px 0; font-size:14px;">Sitios de interés</a>
+            </div>
+            <div>
+                <h3 style="color:#c2c784; font-size:17px;">Contacto</h3>
+                <p style="color:#aaaaaa; font-size:14px;">📧 zooniverse@gmail.com</p>
+                <p style="color:#aaaaaa; font-size:14px;">📍 Medellín, Colombia</p>
+                <a href="Contactenos.html" style="color:#aaaaaa; font-size:14px; text-decoration:none;"> Escríbenos</a>
+            </div>
+            <div>
+                <h3 style="color:#c2c784; font-size:17px;">Síguenos</h3>
+                <a href="https://www.instagram.com/" target="_blank" style="display:block; color:#aaaaaa; text-decoration:none; margin:12px 0; font-size:14px;"> Instagram</a>
+                <a href="https://www.facebook.com/" target="_blank" style="display:block; color:#aaaaaa; text-decoration:none; margin:12px 0; font-size:14px;">Facebook </a>
+            </div>
+        </div>
+    </footer>
+
 </body>
 </html>

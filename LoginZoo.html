@@ -1,11 +1,124 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio Sesión</title>
+    <title>Iniciar Sesión - ZooNiverse</title>
 </head>
-<body>
-    
+<body style="margin: 0; padding: 0; min-height: 100vh; display: flex; flex-wrap: wrap; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background-color: #0b110d; color: #f8fafc; box-sizing: border-box;">
+
+    <!-- ==========================================
+         SECCIÓN IZQUIERDA: Formulario de Login
+         ========================================== -->
+    <div style="flex: 1; min-width: 320px; display: flex; flex-direction: column; justify-content: space-between; padding: 40px 60px; box-sizing: border-box; min-height: 100vh; background-color: #0b110d;">
+        
+        <!-- Top: Logo / Marca -->
+        <div>
+            <div style="display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 16px; color: #c2c784; letter-spacing: 2px;">
+                <div style="width: 28px; height: 28px; background: #c2c784; border-radius: 6px; display: flex; align-items: center; justify-content: center; color: #0b110d; font-size: 14px; font-weight: 800;">Z</div>
+                ZooNiverse
+            </div>
+        </div>
+
+        <!-- Centro: Formulario -->
+        <div style="max-width: 400px; width: 100%; margin: 0 auto; padding: 20px 0;">
+            <h1 style="font-size: 32px; font-weight: 800; color: #c2c784; margin: 0 0 8px 0; letter-spacing: -0.5px;">Bienvenido de nuevo</h1>
+            <p style="color: #94a3b8; font-size: 14px; margin: 0 0 24px 0; line-height: 1.5;">Accede a tus entradas, reservas de tours y mapa interactivo del zoológico.</p>
+
+            <!-- Botones Sociales (Google / Apple) -->
+            <div style="display: flex; gap: 12px; margin-bottom: 20px;">
+                <button style="flex: 1; padding: 12px; border: 1px solid rgba(255,255,255,0.15); border-radius: 12px; background: rgba(255,255,255,0.03); color: #f8fafc; font-size: 14px; font-weight: 600; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; transition: all 0.2s;" onmouseover="this.style.borderColor='#c2c784'; this.style.color='#c2c784';" onmouseout="this.style.borderColor='rgba(255,255,255,0.15)'; this.style.color='#f8fafc';">
+                    Google
+                </button>
+                <button style="flex: 1; padding: 12px; border: 1px solid rgba(255,255,255,0.15); border-radius: 12px; background: rgba(255,255,255,0.03); color: #f8fafc; font-size: 14px; font-weight: 600; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; transition: all 0.2s;" onmouseover="this.style.borderColor='#c2c784'; this.style.color='#c2c784';" onmouseout="this.style.borderColor='rgba(255,255,255,0.15)'; this.style.color='#f8fafc';">
+                    Apple
+                </button>
+            </div>
+
+            <div style="text-align: center; color: #94a3b8; font-size: 12px; margin-bottom: 20px; position: relative;">
+                <span style="background: #0b110d; padding: 0 10px; position: relative; z-index: 1;">o inicia sesión con tu correo</span>
+                <div style="position: absolute; top: 50%; left: 0; width: 100%; height: 1px; background: rgba(255,255,255,0.1); z-index: 0;"></div>
+            </div>
+
+            <!-- Campos del Formulario -->
+            <form style="display: flex; flex-direction: column; gap: 16px;">
+                <div>
+                    <label style="display: block; font-size: 13px; font-weight: 600; color: #c2c784; margin-bottom: 6px;">Correo electrónico</label>
+                    <input type="email" placeholder="tu@ejemplo.com" style="width: 100%; padding: 12px 14px; border: 1px solid rgba(255,255,255,0.15); border-radius: 10px; font-size: 14px; outline: none; box-sizing: border-box; color: #f8fafc; background: rgba(255,255,255,0.03);" onfocus="this.style.borderColor='#c2c784'" onblur="this.style.borderColor='rgba(255,255,255,0.15)'">
+                </div>
+
+                <div>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+                        <label style="font-size: 13px; font-weight: 600; color: #c2c784;">Contraseña</label>
+                        <a href="#" style="font-size: 13px; color: #94a3b8; text-decoration: none; font-weight: 500; transition: color 0.2s;" onmouseover="this.style.color='#c2c784'" onmouseout="this.style.color='#94a3b8'">¿Olvidaste tu contraseña?</a>
+                    </div>
+                    <input type="password" style="width: 100%; padding: 12px 14px; border: 1px solid rgba(255,255,255,0.15); border-radius: 10px; font-size: 14px; outline: none; box-sizing: border-box; color: #f8fafc; background: rgba(255,255,255,0.03);" onfocus="this.style.borderColor='#c2c784'" onblur="this.style.borderColor='rgba(255,255,255,0.15)'">
+                </div>
+
+                <div style="display: flex; align-items: center; gap: 8px; margin: 4px 0;">
+                    <input type="checkbox" id="remember" style="width: 16px; height: 16px; accent-color: #c2c784; cursor: pointer;">
+                    <label for="remember" style="font-size: 13px; color: #94a3b8; cursor: pointer;">Mantener sesión iniciada en este dispositivo</label>
+                </div>
+
+                <button type="submit" style="width: 100%; padding: 12px; background: #c2c784; color: #0b110d; border: none; border-radius: 10px; font-size: 14px; font-weight: 700; cursor: pointer; transition: background 0.2s;" onmouseover="this.style.background='#a8ad6e'" onmouseout="this.style.background='#c2c784'">
+                    Iniciar Sesión
+                </button>
+            </form>
+
+            <div style="text-align: center; margin-top: 20px; font-size: 13px; color: #94a3b8;">
+                ¿Eres nuevo en ZooNiverse? <a href="#" style="color: #c2c784; text-decoration: underline; font-weight: 600;">Crea una cuenta gratis</a>
+            </div>
+        </div>
+
+        <!-- Footer Izquierdo con Copyright Centrado -->
+        <div style="font-size: 12px; color: #94a3b8; display: flex; justify-content: center; align-items: center; gap: 15px; width: 100%; text-align: center; padding-top: 20px;">
+            <span>&copy; 2026 ZooNiverse</span>
+            <span>·</span>
+            <a href="#" style="color: #94a3b8; text-decoration: none;" onmouseover="this.style.color='#c2c784'" onmouseout="this.style.color='#94a3b8'">Privacidad</a>
+            <span>·</span>
+            <a href="#" style="color: #94a3b8; text-decoration: none;" onmouseover="this.style.color='#c2c784'" onmouseout="this.style.color='#94a3b8'">Términos</a>
+        </div>
+    </div>
+
+
+    <!-- ==========================================
+         SECCIÓN DERECHA: Imagen de Fondo + Tarjeta flotante
+         ========================================== -->
+    <div style="flex: 1; min-width: 320px; position: relative; margin: 12px; border-radius: 24px; overflow: hidden; display: flex; align-items: flex-end; padding: 40px; box-sizing: border-box; min-height: 500px;">
+        
+        <!-- Imagen de fondo cubriendo todo el contenedor -->
+        <img src="/lion-pride-dry-forest.jpg" alt="Fondo Login" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2;">
+
+        <!-- Capa degradada sutil para que el texto de abajo resalte -->
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to top, rgba(11, 17, 13, 0.85) 0%, rgba(11, 17, 13, 0.3) 50%, rgba(0,0,0,0) 100%); z-index: -1;"></div>
+
+        <!-- Badge superior derecho -->
+        <div style="position: absolute; top: 24px; right: 24px; background: rgba(11, 17, 13, 0.75); backdrop-filter: blur(8px); padding: 6px 14px; border-radius: 20px; font-size: 12px; font-weight: 600; color: #c2c784; border: 1px solid rgba(194, 199, 132, 0.2); box-shadow: 0 4px 12px rgba(0,0,0,0.3);">
+            +150 Especies de animales en conservación
+        </div>
+
+        <!-- Tarjeta de Testimonio Flotante (Inferior) -->
+        <div style="width: 100%; z-index: 1;">
+            <!-- Estrellas -->
+            <div style="color: #fbbf24; font-size: 14px; margin-bottom: 8px; letter-spacing: 2px;">
+                ★★★★★
+            </div>
+            <p style="color: #ffffff; font-size: 18px; font-weight: 500; line-height: 1.4; margin: 0 0 16px 0; text-shadow: 0 2px 4px rgba(0,0,0,0.3);">
+                "Planifico todas mis visitas a ZooNiverse desde aquí. El mapa de los hábitats y las guías interactivas guiaron a mi familia sin perdernos una sola exhibición."
+            </p>
+            
+            <div style="display: flex; align-items: center; gap: 12px;">
+                <div style="width: 36px; height: 36px; background: #c2c784; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 12px; color: #0b110d; box-shadow: 0 2px 8px rgba(0,0,0,0.2);">
+                    BA
+                </div>
+                <div>
+                    <div style="color: #ffffff; font-size: 14px; font-weight: 600;">Betsabé Arias</div>
+                    <div style="color: #94a3b8; font-size: 12px;">Visitante del parque ZooNiverse, Colombia</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
 </body>
 </html>
