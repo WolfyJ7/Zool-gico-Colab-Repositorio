@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nuestros Animales - ZooNiverse</title>
+</head>
+
+<body style="font-family: Arial, sans-serif; margin: 0; color: #243324; background-color: #0b110d;">
+
+    <!-- SECCIÓN HERO CON IMAGEN DE FONDO -->
+    <div style="background-color:#0b110d; min-height:90vh; margin:0; padding:20px; box-sizing:border-box; background-image:linear-gradient(rgba(0,0,0,0.20), rgba(0,0,0,0.40)), url('img/lovelooking-otter-7868090_1920.jpg'); background-size:cover; background-position:center; display:flex; flex-direction:column; justify-content:space-between;">
+        
+        <!-- BARRA DE NAVEGACIÓN -->
+        <nav style="display:flex; justify-content:space-between; align-items:center; padding:10px 40px; text-align:center; flex-wrap:wrap;">
+            <div style="font-size:22px; font-weight:bold; color:#c2c784; letter-spacing:2px;">ZooNiverse</div>
+            <div style="display:flex; gap:25px; font-size:14px; align-items:center; flex-wrap:wrap;">
+                <a href="Inicio.html" style="color:#ffffff; text-decoration:none; font-weight:bold;">Inicio</a>
+                <a href="SobreNosotros.html" style="color:#aaaaaa; text-decoration:none;">Sobre Nosotros</a>
+                <a href="Animales.html" style="color:#aaaaaa; text-decoration:none;">Animales</a>
+                <button popovertarget="contacto" style="font: inherit; color: #f8fafc; background: none; border: 0; cursor: pointer; padding: 0; font-size: 14px;" onmouseenter="this.style.textDecoration='underline'" onmouseleave="this.style.textDecoration='none'">Contáctanos</button>
+                <a href="InicioSesion.html" style="color:#aaaaaa; text-decoration:none;">Inicio Sesión</a>
+                <a href="SitiosInteres.html" style="color:#aaaaaa; text-decoration:none;">Sitios de Interés</a>
+            </div>
+        </nav>
+
+        <!-- TEXTO HERO -->
+        <div style="text-align:center; padding:85px 20px;">
+            <p style="font-size:20px; color:#ffffff; margin-bottom:15px;">Si seguimos explorando el zoológico, podemos descubrir más animales nuevos</p>
+        </div>
+
+    </div>
+
+    <!-- POPOVER DE CONTACTO CON COLORES DE ZOONIVERSE -->
+    <div id="contacto" popover role="dialog" aria-labelledby="titulo-contacto"
+         style="width:max(min(560px,100%),clamp(0px,calc((601px - 100vw)*10000),100%)); min-height:clamp(0px,calc((601px - 100vw)*10000),100dvh); max-height:calc(100dvh - 32px); padding:0; border:1px solid rgba(194, 199, 132, 0.4); border-radius:16px; color:#ffffff; background:#141c16; box-shadow:0 24px 64px rgba(0,0,0,.85); overflow:auto; overscroll-behavior:contain"
+         ontoggle="document.body.style.overflow=event.newState==='open'?'hidden':''">
+
+        <!-- Cabecera del Popover -->
+        <div style="position:sticky; top:0; z-index:1; display:flex; align-items:center; justify-content:center; height:78px; background:#0b110d; border-bottom:1px solid rgba(194, 199, 132, 0.2);">
+            <h2 id="titulo-contacto" style="margin:0; font-size:22px; font-weight:600; color:#c2c784; letter-spacing:1px;">Contáctanos</h2>
+            <button popovertarget="contacto" popovertargetaction="hide" aria-label="Cerrar"
+                    style="position:absolute; right:16px; top:50%; transform:translateY(-50%); display:grid; place-items:center; width:44px; height:44px; padding:0; color:#c2c784; background:none; border:0; border-radius:50%; cursor:pointer;"
+                    onmouseenter="this.style.background='rgba(194, 199, 132, 0.15)'" onmouseleave="this.style.background='none'">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                    <path d="M18 6 6 18M6 6l12 12"/>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Formulario con paleta de ZooNiverse -->
+        <form action="mailto:zooniverse@gmail.com" method="post" enctype="text/plain" style="display:flex; flex-direction:column; gap:16px; padding:26px 21px 28px;">
+            <p style="margin:0 0 8px; line-height:24px; color:#aaaaaa; font-size:14px;">Completa el formulario y nuestros asesores te contactarán lo antes posible para darte toda la información que necesitas.</p>
+
+            <input type="text" name="nombre" placeholder="Nombre" autocomplete="name" required
+                   style="width:100%; height:56px; padding:0 17px; font:inherit; color:#ffffff; background:#0b110d; border:1px solid rgba(194, 199, 132, 0.3); border-radius:28px; box-sizing:border-box;"
+                   onfocus="this.style.outline='0'; this.style.borderColor='#c2c784'; this.style.boxShadow='0 0 0 1px #c2c784'"
+                   onblur="this.style.outline=''; this.style.borderColor='rgba(194, 199, 132, 0.3)'; this.style.boxShadow='none'">
+
+            <input type="email" name="correo" placeholder="Correo electrónico" autocomplete="email" required
+                   style="width:100%; height:56px; padding:0 17px; font:inherit; color:#ffffff; background:#0b110d; border:1px solid rgba(194, 199, 132, 0.3); border-radius:28px; box-sizing:border-box;"
+                   onfocus="this.style.outline='0'; this.style.borderColor='#c2c784'; this.style.boxShadow='0 0 0 1px #c2c784'"
+                   onblur="this.style.outline=''; this.style.borderColor='rgba(194, 199, 132, 0.3)'; this.style.boxShadow='none'">
+
+            <!-- Prefijo + Teléfono -->
+            <div style="display:flex; height:56px; border:1px solid rgba(194, 199, 132, 0.3); border-radius:28px; overflow:hidden; box-sizing:border-box; background:#0b110d;">
+                <select name="prefijo" aria-label="Prefijo del país" autocomplete="tel-country-code"
+                        style="height:100%; font:inherit; color:#aaaaaa; background-color:#0b110d; border:0; border-radius:0; flex:0 0 clamp(130px,35%,180px); padding:0 30px 0 17px; border-right:1px solid rgba(194, 199, 132, 0.3); appearance:none; cursor:pointer; box-sizing:border-box;"
+                        onfocus="this.style.outline='0'; this.parentNode.style.borderColor='#c2c784'; this.parentNode.style.boxShadow='0 0 0 1px #c2c784'"
+                        onblur="this.style.outline=''; this.parentNode.style.borderColor='rgba(194, 199, 132, 0.3)'; this.parentNode.style.boxShadow='none'">
+                    <option value="" selected disabled style="background:#0b110d; color:#aaaaaa;">Prefijo</option>
+                    <option value="+54" style="background:#0b110d; color:#fff;">+54 Argentina</option>
+                    <option value="+56" style="background:#0b110d; color:#fff;">+56 Chile</option>
+                    <option value="+57" style="background:#0b110d; color:#fff;">+57 Colombia</option>
+                    <option value="+593" style="background:#0b110d; color:#fff;">+593 Ecuador</option>
+                    <option value="+34" style="background:#0b110d; color:#fff;">+34 España</option>
+                    <option value="+1" style="background:#0b110d; color:#fff;">+1 EE. UU.</option>
+                    <option value="+52" style="background:#0b110d; color:#fff;">+52 México</option>
+                    <option value="+51" style="background:#0b110d; color:#fff;">+51 Perú</option>
+                    <option value="+58" style="background:#0b110d; color:#fff;">+58 Venezuela</option>
+                </select>
+                <input type="tel" name="telefono" placeholder="Teléfono" autocomplete="tel-national"
+                       style="height:100%; font:inherit; color:#ffffff; background-color:#0b110d; border:0; border-radius:0; flex:1; min-width:0; padding:0 17px; box-sizing:border-box;"
+                       onfocus="this.style.outline='0'; this.parentNode.style.borderColor='#c2c784'; this.parentNode.style.boxShadow='0 0 0 1px #c2c784'"
+                       onblur="this.style.outline=''; this.parentNode.style.borderColor='rgba(194, 199, 132, 0.3)'; this.parentNode.style.boxShadow='none'">
+            </div>
+
+            <textarea name="mensaje" placeholder="Mensaje" required
+                      style="width:100%; height:100px; padding:18px 17px; font:inherit; color:#ffffff; background:#0b110d; border:1px solid rgba(194, 199, 132, 0.3); border-radius:20px; line-height:22px; resize:none; box-sizing:border-box;"
+                      onfocus="this.style.outline='0'; this.style.borderColor='#c2c784'; this.style.boxShadow='0 0 0 1px #c2c784'"
+                      onblur="this.style.outline=''; this.style.borderColor='rgba(194, 199, 132, 0.3)'; this.style.boxShadow='none'"></textarea>
+
+            <!-- Casillas de verificación (Checkboxes con accent-color en #c2c784) -->
+            <label style="display:flex; align-items:flex-start; gap:9px; font-size:14px; line-height:20px; color:#aaaaaa; cursor:pointer;">
+                <input type="checkbox" name="mayor_de_edad" required style="flex:none; width:18px; height:18px; margin:0; accent-color:#c2c784; cursor:pointer;">
+                Soy mayor de edad y acepto los Términos de uso y la Política de privacidad
+            </label>
+            <label style="display:flex; align-items:flex-start; gap:9px; font-size:14px; line-height:20px; color:#aaaaaa; cursor:pointer;">
+                <input type="checkbox" name="novedades" style="flex:none; width:18px; height:18px; margin:0; accent-color:#c2c784; cursor:pointer;">
+                Quiero estar al día con las novedades
+            </label>
+
+            <!-- Botón de Envío estilo ZooNiverse -->
+            <button type="submit"
+                    style="height:44px; margin-top:10px; font:inherit; font-size:15px; font-weight:bold; color:#0b110d; background:#c2c784; border:0; border-radius:22px; cursor:pointer; box-sizing:border-box; transition:background-color 0.3s ease, color 0.3s ease;"
+                    onmouseenter="this.style.background='#ffffff'; this.style.color='#0b110d'"
+                    onmouseleave="this.style.background='#c2c784'; this.style.color='#0b110d'">Enviar mensaje</button>
+        </form>
+    </div>
+
+    <!-- SECCIÓN ANIMALES -->
+    <section id="animales" style="padding:70px 40px; background-color: #141c16; max-width:1200px; margin:0 auto;">
+        <div style="text-align:center; margin-bottom:40px;">
+            <p style="color:#c2c784; font-size:13px; letter-spacing:2px; text-transform:uppercase; font-weight:bold; margin-bottom:5px;">Descubre</p>
+            <h2 style="font-size:30px; color:#ffffff; margin:0;">Nuestros Animales</h2>
+        </div>
+        <div style="display:flex; gap:30px; justify-content:center; flex-wrap:wrap;">
+            
+            <div style="background-color:#141c16; border-radius:10px; overflow:hidden; width:320px; border:1px solid rgba(255,255,255,0.05); transition:transform 0.4s ease, box-shadow 0.4s ease;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 15px 30px rgba(0,0,0,0.6)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+                <div style="height:180px; background-image:url('img/leon.jpg'); background-size:cover; background-position:center;"></div>
+                <div style="padding:20px;">
+                    <h3 style="color:#ffffff; margin:0 0 10px; font-size:18px;">Leones</h3>
+                    <p style="color:#aaaaaa; font-size:14px; line-height:1.5; margin:0;">Vive en grupos llamados manadas</p>
+                </div>
+            </div>
+
+            <div style="background-color:#141c16; border-radius:10px; overflow:hidden; width:320px; border:1px solid rgba(255,255,255,0.05); transition:transform 0.4s ease, box-shadow 0.4s ease;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 15px 30px rgba(0,0,0,0.6)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+                <div style="height:180px; background-image:url('img/jirafa.jpg'); background-size:cover; background-position:center;"></div>
+                <div style="padding:20px;">
+                    <h3 style="color:#ffffff; margin:0 0 10px; font-size:18px;">Jirafa en la sabana</h3>
+                    <p style="color:#aaaaaa; font-size:14px; line-height:1.5; margin:0;">Es el animal terrestre más alto.</p>
+                </div>
+            </div>
+
+            <div style="background-color:#141c16; border-radius:10px; overflow:hidden; width:320px; border:1px solid rgba(255,255,255,0.05); transition:transform 0.4s ease, box-shadow 0.4s ease;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 15px 30px rgba(0,0,0,0.6)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+                <div style="height:180px; background-image:url('img/elefamte.jpg'); background-size:cover; background-position:center;"></div>
+                <div style="padding:20px;">
+                    <h3 style="color:#ffffff; margin:0 0 10px; font-size:18px;">Elefante</h3>
+                    <p style="color:#aaaaaa; font-size:14px; line-height:1.5; margin:0;">Se comunica con sonidos y movimientos</p>
+                </div>
+            </div>
+
+            <div style="background-color:#141c16; border-radius:10px; overflow:hidden; width:320px; border:1px solid rgba(255,255,255,0.05); transition:transform 0.4s ease, box-shadow 0.4s ease;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 15px 30px rgba(0,0,0,0.6)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+                <div style="height:180px; background-image:url('img/elefamte.jpg'); background-size:cover; background-position:center;"></div>
+                <div style="padding:20px;">
+                    <h3 style="color:#ffffff; margin:0 0 10px; font-size:18px;">Mono</h3>
+                    <p style="color:#aaaaaa; font-size:14px; line-height:1.5; margin:0;">Se comunica con sonidos y movimientos</p>
+                </div>
+            </div>
+
+            <div style="background-color:#141c16; border-radius:10px; overflow:hidden; width:320px; border:1px solid rgba(255,255,255,0.05); transition:transform 0.4s ease, box-shadow 0.4s ease;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 15px 30px rgba(0,0,0,0.6)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+                <div style="height:180px; background-image:url('img/elefamte.jpg'); background-size:cover; background-position:center;"></div>
+                <div style="padding:20px;">
+                    <h3 style="color:#ffffff; margin:0 0 10px; font-size:18px;">Loro</h3>
+                    <p style="color:#aaaaaa; font-size:14px; line-height:1.5; margin:0;">Se comunica con sonidos y movimientos</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- PIE DE PÁGINA -->
+    <footer style="background-color:#0b110d; padding:45px 40px 20px; border-top:1px solid rgba(255,255,255,0.08);">
+        <div style="display:flex; justify-content:space-around; flex-wrap:wrap; gap:35px;">
+            <div style="max-width:260px;">
+                <h2 style="color:#c2c784; font-size:25px; letter-spacing:2px; margin-top:0;">ZooNiverse</h2>
+                <p style="color:#aaaaaa; font-size:14px; line-height:1.7;">Un universo lleno de vida, naturaleza y especies extraordinarias. Descubre y aprende con nosotros.</p>
+            </div>
+            <div>
+                <h3 style="color:#c2c784; font-size:17px; margin-top:0;">Navegación</h3>
+                <a href="Inicio.html" style="display:block; color:#aaaaaa; text-decoration:none; margin:12px 0; font-size:14px;">Inicio</a>
+                <a href="SobreNosotros.html" style="display:block; color:#aaaaaa; text-decoration:none; margin:12px 0; font-size:14px;">Sobre nosotros</a>
+                <a href="Animales.html" style="display:block; color:#aaaaaa; text-decoration:none; margin:12px 0; font-size:14px;">Animales</a>
+                <a href="SitiosInteres.html" style="display:block; color:#aaaaaa; text-decoration:none; margin:12px 0; font-size:14px;">Sitios de interés</a>
+            </div>
+            <div>
+                <h3 style="color:#c2c784; font-size:17px; margin-top:0;">Contacto</h3>
+                <p style="color:#aaaaaa; font-size:14px; margin:12px 0;">📧 zooniverse@gmail.com</p>
+                <p style="color:#aaaaaa; font-size:14px; margin:12px 0;">📍 Medellín, Colombia</p>
+                <button popovertarget="contacto" style="font:inherit; color:#aaaaaa; background:none; border:0; padding:0; cursor:pointer; font-size:14px;" onmouseenter="this.style.textDecoration='underline'" onmouseleave="this.style.textDecoration='none'">Escríbenos</button>
+            </div>
+            <div>
+                <h3 style="color:#c2c784; font-size:17px; margin-top:0;">Síguenos</h3>
+                <a href="https://www.instagram.com/" target="_blank" style="display:block; color:#aaaaaa; text-decoration:none; margin:12px 0; font-size:14px;">Instagram</a>
+                <a href="https://www.facebook.com/" target="_blank" style="display:block; color:#aaaaaa; text-decoration:none; margin:12px 0; font-size:14px;">Facebook</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
