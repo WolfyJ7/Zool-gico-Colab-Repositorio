@@ -13,11 +13,86 @@
                 <a href="Inicio.html" style="color:#ffffff; text-decoration:none; font-weight:bold;">Inicio</a>
                 <a href="SobreNosotros.html" style="color:#ffffff; text-decoration:none;"> Sobre Nosotros</a>
                 <a href="Animales.html" style="color:#ffffff; text-decoration:none;">Animales</a>
-                <a href="Contactenos.html" style="color:#ffffff; text-decoration:none;">Contactenos</a>
+                <button popovertarget="contacto" style="font: inherit; color: #f8fafc; background: none; border: 0; cursor: pointer; padding: 0; font-size: 14px;" onmouseenter="this.style.textDecoration='underline'" onmouseleave="this.style.textDecoration='none'">Contáctanos</button>
                 <a href="InicioSesion.html" style="color:#ffffff; text-decoration:none;">Inicio Sesion</a>
                 <a href="SitiosInteres.html" style="color:#ffffff; text-decoration:none;">Sitios de Interes </a>
             </div>
         </nav>
+  <div id="contacto" popover role="dialog" aria-labelledby="titulo-contacto"
+         style="width:max(min(560px,100%),clamp(0px,calc((601px - 100vw)*10000),100%)); min-height:clamp(0px,calc((601px - 100vw)*10000),100dvh); max-height:calc(100dvh - 32px); padding:0; border:1px solid rgba(194, 199, 132, 0.4); border-radius:16px; color:#ffffff; background:#141c16; box-shadow:0 24px 64px rgba(0,0,0,.85); overflow:auto; overscroll-behavior:contain"
+         ontoggle="document.body.style.overflow=event.newState==='open'?'hidden':''">
+
+        <!-- Cabecera del Popover -->
+        <div style="position:sticky; top:0; z-index:1; display:flex; align-items:center; justify-content:center; height:78px; background:#0b110d; border-bottom:1px solid rgba(194, 199, 132, 0.2);">
+            <h2 id="titulo-contacto" style="margin:0; font-size:22px; font-weight:600; color:#c2c784; letter-spacing:1px;">Contáctanos</h2>
+            <button popovertarget="contacto" popovertargetaction="hide" aria-label="Cerrar"
+                    style="position:absolute; right:16px; top:50%; transform:translateY(-50%); display:grid; place-items:center; width:44px; height:44px; padding:0; color:#c2c784; background:none; border:0; border-radius:50%; cursor:pointer;"
+                    onmouseenter="this.style.background='rgba(194, 199, 132, 0.15)'" onmouseleave="this.style.background='none'">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                    <path d="M18 6 6 18M6 6l12 12"/>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Formulario con paleta de ZooNiverse -->
+        <form action="mailto:zooniverse@gmail.com" method="post" enctype="text/plain" style="display:flex; flex-direction:column; gap:16px; padding:26px 21px 28px;">
+            <p style="margin:0 0 8px; line-height:24px; color:#aaaaaa; font-size:14px;">Completa el formulario y nuestros asesores te contactarán lo antes posible para darte toda la información que necesitas.</p>
+
+            <input type="text" name="nombre" placeholder="Nombre" autocomplete="name" required
+                   style="width:100%; height:56px; padding:0 17px; font:inherit; color:#ffffff; background:#0b110d; border:1px solid rgba(194, 199, 132, 0.3); border-radius:28px; box-sizing:border-box;"
+                   onfocus="this.style.outline='0'; this.style.borderColor='#c2c784'; this.style.boxShadow='0 0 0 1px #c2c784'"
+                   onblur="this.style.outline=''; this.style.borderColor='rgba(194, 199, 132, 0.3)'; this.style.boxShadow='none'">
+
+            <input type="email" name="correo" placeholder="Correo electrónico" autocomplete="email" required
+                   style="width:100%; height:56px; padding:0 17px; font:inherit; color:#ffffff; background:#0b110d; border:1px solid rgba(194, 199, 132, 0.3); border-radius:28px; box-sizing:border-box;"
+                   onfocus="this.style.outline='0'; this.style.borderColor='#c2c784'; this.style.boxShadow='0 0 0 1px #c2c784'"
+                   onblur="this.style.outline=''; this.style.borderColor='rgba(194, 199, 132, 0.3)'; this.style.boxShadow='none'">
+
+            <!-- Prefijo + Teléfono -->
+            <div style="display:flex; height:56px; border:1px solid rgba(194, 199, 132, 0.3); border-radius:28px; overflow:hidden; box-sizing:border-box; background:#0b110d;">
+                <select name="prefijo" aria-label="Prefijo del país" autocomplete="tel-country-code"
+                        style="height:100%; font:inherit; color:#aaaaaa; background-color:#0b110d; border:0; border-radius:0; flex:0 0 clamp(130px,35%,180px); padding:0 30px 0 17px; border-right:1px solid rgba(194, 199, 132, 0.3); appearance:none; cursor:pointer; box-sizing:border-box;"
+                        onfocus="this.style.outline='0'; this.parentNode.style.borderColor='#c2c784'; this.parentNode.style.boxShadow='0 0 0 1px #c2c784'"
+                        onblur="this.style.outline=''; this.parentNode.style.borderColor='rgba(194, 199, 132, 0.3)'; this.parentNode.style.boxShadow='none'">
+                    <option value="" selected disabled style="background:#0b110d; color:#aaaaaa;">Prefijo</option>
+                    <option value="+54" style="background:#0b110d; color:#fff;">+54 Argentina</option>
+                    <option value="+56" style="background:#0b110d; color:#fff;">+56 Chile</option>
+                    <option value="+57" style="background:#0b110d; color:#fff;">+57 Colombia</option>
+                    <option value="+593" style="background:#0b110d; color:#fff;">+593 Ecuador</option>
+                    <option value="+34" style="background:#0b110d; color:#fff;">+34 España</option>
+                    <option value="+1" style="background:#0b110d; color:#fff;">+1 EE. UU.</option>
+                    <option value="+52" style="background:#0b110d; color:#fff;">+52 México</option>
+                    <option value="+51" style="background:#0b110d; color:#fff;">+51 Perú</option>
+                    <option value="+58" style="background:#0b110d; color:#fff;">+58 Venezuela</option>
+                </select>
+                <input type="tel" name="telefono" placeholder="Teléfono" autocomplete="tel-national"
+                       style="height:100%; font:inherit; color:#ffffff; background-color:#0b110d; border:0; border-radius:0; flex:1; min-width:0; padding:0 17px; box-sizing:border-box;"
+                       onfocus="this.style.outline='0'; this.parentNode.style.borderColor='#c2c784'; this.parentNode.style.boxShadow='0 0 0 1px #c2c784'"
+                       onblur="this.style.outline=''; this.parentNode.style.borderColor='rgba(194, 199, 132, 0.3)'; this.parentNode.style.boxShadow='none'">
+            </div>
+
+            <textarea name="mensaje" placeholder="Mensaje" required
+                      style="width:100%; height:100px; padding:18px 17px; font:inherit; color:#ffffff; background:#0b110d; border:1px solid rgba(194, 199, 132, 0.3); border-radius:20px; line-height:22px; resize:none; box-sizing:border-box;"
+                      onfocus="this.style.outline='0'; this.style.borderColor='#c2c784'; this.style.boxShadow='0 0 0 1px #c2c784'"
+                      onblur="this.style.outline=''; this.style.borderColor='rgba(194, 199, 132, 0.3)'; this.style.boxShadow='none'"></textarea>
+
+            <!-- Casillas de verificación (Checkboxes con accent-color en #c2c784) -->
+            <label style="display:flex; align-items:flex-start; gap:9px; font-size:14px; line-height:20px; color:#aaaaaa; cursor:pointer;">
+                <input type="checkbox" name="mayor_de_edad" required style="flex:none; width:18px; height:18px; margin:0; accent-color:#c2c784; cursor:pointer;">
+                Soy mayor de edad y acepto los Términos de uso y la Política de privacidad
+            </label>
+            <label style="display:flex; align-items:flex-start; gap:9px; font-size:14px; line-height:20px; color:#aaaaaa; cursor:pointer;">
+                <input type="checkbox" name="novedades" style="flex:none; width:18px; height:18px; margin:0; accent-color:#c2c784; cursor:pointer;">
+                Quiero estar al día con las novedades
+            </label>
+
+            <!-- Botón de Envío estilo ZooNiverse -->
+            <button type="submit"
+                    style="height:44px; margin-top:10px; font:inherit; font-size:15px; font-weight:bold; color:#0b110d; background:#c2c784; border:0; border-radius:22px; cursor:pointer; box-sizing:border-box; transition:background-color 0.3s ease, color 0.3s ease;"
+                    onmouseenter="this.style.background='#ffffff'; this.style.color='#0b110d'"
+                    onmouseleave="this.style.background='#c2c784'; this.style.color='#0b110d'">Enviar mensaje</button>
+        </form>
+    </div>
         <section style="min-height:500px; display:flex; align-items:center; padding:20px 40px; box-sizing:border-box;">
             <div style="background-color:rgba(35,35,35,0.45); backdrop-filter:blur(5px); color:white; padding:35px; border-radius:12px; max-width:460px; width:100%; box-sizing:border-box; box-shadow:0 10px 25px rgba(0,0,0,0.5); transition:all 0.4s ease;" onmouseover="this.style.transform='translateY(-6px)'; this.style.boxShadow='0 20px 35px rgba(0,0,0,0.7)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 25px rgba(0,0,0,0.5)';">
                 <p style="color:#c2c784; letter-spacing:3px; text-transform:uppercase; font-size:12px; margin:0 0 10px; font-weight:bold;"> Visitanos</p>
